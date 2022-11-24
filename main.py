@@ -19,7 +19,7 @@ sinine_auto2 = pygame.image.load("pildi_failid/f1_blue.png")  # muutuljale sinin
 punane_auto_X, punane_auto_Y = 300, 390  # määrame punase auto kordinaadid muutujatesse
 sinine_auto1_X, sinine_auto1_Y = 175, random.uniform(50, 350)  # määrame sinise auto 1 kordinaadid muutujatesse, Y kordnaat võetakse suvalsielt vahemikus 50 - 350
 sinine_auto2_X, sinine_auto2_Y = 425, random.uniform(50, 350)  # määrame sinise auto 2 kordinaadid muutujatesse, Y kordnaat võetakse suvalsielt vahemikus 50 - 350
-kiirus_X = 2  # määrame muutujale kiirus_X väärtuse 2
+kiirus_Y = 2  # määrame muutujale kiirus_Y väärtuse 2
 punktid = 0  # määrame muutujale punktid väärtuse 0
 
 # teksti font
@@ -40,8 +40,8 @@ while True:  # nii kaua, kui tsükkel on tõene,
     ekraan.blit(sinine_auto2, (sinine_auto2_X, sinine_auto2_Y))  # kuvame ekraanil sinise auto 2 mille kordinaadid võetakse muutujast
     ekraan.blit(tekst, [520, 200])  # kuvame ekraanil muutuja tekst väärtuse kordinaatidega 520,200
 
-    sinine_auto1_Y += kiirus_X  # muutjale sinine_auto1_Y lisame muutuja kiirus_X värtuse
-    sinine_auto2_Y += kiirus_X  # muutjale sinine_auto2_Y lisame muutuja kiirus_X värtuse
+    sinine_auto1_Y += kiirus_Y  # muutjale sinine_auto1_Y lisame muutuja kiirus_Y värtuse
+    sinine_auto2_Y += kiirus_Y  # muutjale sinine_auto2_Y lisame muutuja kiirus_Y värtuse
 
     if sinine_auto1_Y > ekraanY:  # kui muutuja sinine_auto1_Y on suurem kui muutuja ekraanY, siis
         sinine_auto1_Y = random.uniform(-50, -300)  # muutujale sinine_auto1_Y omistame suvalise väärtuse vahemikus -50 ja -300
