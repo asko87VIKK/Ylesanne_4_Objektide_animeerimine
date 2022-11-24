@@ -44,11 +44,11 @@ while True:  # nii kaua, kui tsükkel on tõene,
     sinine_auto2_Y += kiirus_Y  # muutjale sinine_auto2_Y lisame muutuja kiirus_Y värtuse
 
     if sinine_auto1_Y > ekraanY:  # kui muutuja sinine_auto1_Y on suurem kui muutuja ekraanY, siis
-        sinine_auto1_Y = random.uniform(-50, -300)  # muutujale sinine_auto1_Y omistame suvalise väärtuse vahemikus -50 ja -300
+        sinine_auto1_Y = random.uniform(-70, -500)  # muutujale sinine_auto1_Y omistame suvalise väärtuse vahemikus -50 ja -300
         punktid += 1  # muutjale punktid liidame juurde 1
 
     if sinine_auto2_Y > ekraanY:  # kui muutuja sinine_auto2_Y on suurem kui muutuja ekraanY, siis
-        sinine_auto2_Y = random.uniform(-50, -300)  # muutujale sinine_auto2_Y omistame suvalise väärtuse vahemikus -50 ja -300
+        sinine_auto2_Y = random.uniform(-70, -500)  # muutujale sinine_auto2_Y omistame suvalise väärtuse vahemikus -50 ja -300
         punktid += 1  # muutjale punktid liidame juurde 1
 
     pygame.display.flip()  # värskendame tervet ekraani
