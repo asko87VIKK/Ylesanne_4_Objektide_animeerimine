@@ -24,7 +24,7 @@ punktid = 0  # määrame muutujale punktid väärtuse 0
 
 # teksti font
 font = pygame.font.Font(pygame.font.match_font('Arial'), 25)  # määrame muutujale "font" suuruseks 25 ja fondiks "Arial"
-
+i = 0
 while True:  # nii kaua, kui tsükkel on tõene,
     for syndmus in pygame.event.get():  # sükkli muutujale omistatakse kõik pygame.event.get() väärtused
         if syndmus.type == pygame.QUIT:  # kui tsüklimuutuja syndmus tüüp võrdub pygame.QUIT
@@ -33,12 +33,6 @@ while True:  # nii kaua, kui tsükkel on tõene,
 
     FPS.tick(60)  # värskendame ekraani 60 korda sekundis
     tekst = font.render("Skoor: " + str(punktid), True, [255, 255, 255])  # omistame muutujale tekst väärtuseks sõne ja muutujast punktid oleva arvu ja värvime selle valgeks
-
-    ekraan.blit(taust, [0, 0])  # kuvame ekraanil taustapildi faili kordinaatidega 0,0
-    ekraan.blit(punane_auto, [punane_auto_X, punane_auto_Y])  # kuvame ekraanil punase auto mille kordinaadid võetakse muutujast
-    ekraan.blit(sinine_auto1, (sinine_auto1_X, sinine_auto1_Y))  # kuvame ekraanil sinise auto 1 mille kordinaadid võetakse muutujast
-    ekraan.blit(sinine_auto2, (sinine_auto2_X, sinine_auto2_Y))  # kuvame ekraanil sinise auto 2 mille kordinaadid võetakse muutujast
-    ekraan.blit(tekst, [520, 200])  # kuvame ekraanil muutuja tekst väärtuse kordinaatidega 520,200
 
     sinine_auto1_Y += kiirus_Y  # muutjale sinine_auto1_Y lisame muutuja kiirus_Y värtuse
     sinine_auto2_Y += kiirus_Y  # muutjale sinine_auto2_Y lisame muutuja kiirus_Y värtuse
@@ -51,4 +45,9 @@ while True:  # nii kaua, kui tsükkel on tõene,
         sinine_auto2_Y = random.uniform(-70, -500)  # muutujale sinine_auto2_Y omistame suvalise väärtuse vahemikus -50 ja -300
         punktid += 1  # muutjale punktid liidame juurde 1
 
+    ekraan.blit(taust, [0, 0])  # kuvame ekraanil taustapildi faili kordinaatidega 0,0
+    ekraan.blit(punane_auto, [punane_auto_X, punane_auto_Y])  # kuvame ekraanil punase auto mille kordinaadid võetakse muutujast
+    ekraan.blit(sinine_auto1, (sinine_auto1_X, sinine_auto1_Y))  # kuvame ekraanil sinise auto 1 mille kordinaadid võetakse muutujast
+    ekraan.blit(sinine_auto2, (sinine_auto2_X, sinine_auto2_Y))  # kuvame ekraanil sinise auto 2 mille kordinaadid võetakse muutujast
+    ekraan.blit(tekst, [520, 200])  # kuvame ekraanil muutuja tekst väärtuse kordinaatidega 520,200
     pygame.display.flip()  # värskendame tervet ekraani
