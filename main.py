@@ -13,7 +13,7 @@ taust = pygame.image.load("pildi_failid/bg_rally.jpg")  # muutuljale taust omist
 # autod
 punane_auto = pygame.image.load("pildi_failid/f1_red.png")  # muutuljale punase_auto omistame pildifaili väärtuse
 sinine_auto1 = pygame.image.load("pildi_failid/f1_blue.png")  # muutuljale sinine_auto_1 omistame pildifaili väärtuse
-sinine_auto2 = pygame.image.load("pildi_failid/f1_blue.png")  # muutuljale sinine_auto_2 omistame pildifaili väärtuse
+sinine_auto2 = sinine_auto1  # muutuljale sinine_auto_2 omistame sinine_auto1 väärtuse
 
 # autode kiirus, asukoht, punktid
 punane_auto_X, punane_auto_Y = 300, 390  # määrame punase auto kordinaadid muutujatesse
